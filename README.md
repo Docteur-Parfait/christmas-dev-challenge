@@ -14,8 +14,8 @@ Assurez-vous d'avoir les éléments suivants installés sur votre machine :
 Fork et Clonez le dépôt et installez les dépendances :
 
 ```bash
-git clone https://github.com/votre-utilisateur/christmas-challenge.git
-cd christmas-challenge
+git clone https://github.com/votre-utilisateur/christmas-dev-challenge.git
+cd christmas-dev-challenge
 npm install
 # ou
 yarn install
