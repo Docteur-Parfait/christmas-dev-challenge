@@ -66,24 +66,6 @@ Le composant `Project` importe la liste des projets depuis `utils.js` et affiche
 
 Le composant `ProjectItem` reçoit les données du projet via des props et affiche les informations du projet, y compris le nom de l'auteur, sa position, sa photo, et les liens vers le projet et le dépôt GitHub.
 
-## Liste des Projets
-
-Voici la liste des projets participants au challenge :
-
-```javascript
-import { projectList } from "./services/utils";
-
-projectList.forEach(project => {
-  console.log(`
-  - **${project.authorName}**
-    - Position: ${project.authorPosition}
-    - [LinkedIn](${project.authorLinkedin})
-    - [Projet](${project.url})
-    - [GitHub](${project.github})
-  `);
-});
-```
-
 ## Utilisation
 
 Pour ajouter un nouveau projet, modifiez le fichier `utils.js` dans le dossier `services` et ajoutez un nouvel objet à la liste `projectList` :
