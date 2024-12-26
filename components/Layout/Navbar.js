@@ -51,7 +51,7 @@ export default function Navbar() {
 
                     {/* Bouton connexion à droite */}
                     <div className=" md:block">
-                        <a href="/enroll"
+                        <a href="https://github.com/Docteur-Parfait/christmas-dev-challenge" target="_blank"
                             className={`box-border inline-flex items-center justify-center h-10 px-4 text-base text-center no-underline align-middle bg-transparent border rounded cursor-pointer select-none hover:bg-gray-50 hover:text-blue focus:shadow-xs focus:no-underline ${shouldBeTransparent ? "text-white border-white" : "text-black border-gray-300"}`}>
                             Find on Github
                         </a>
