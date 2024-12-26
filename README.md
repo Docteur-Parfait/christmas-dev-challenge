@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Christmas Dev Challenge 2024
 
-## Getting Started
+Ce projet est un site web développé avec [Next.js](https://nextjs.org/) qui rassemble les liens, profils et dépôts GitHub de tous les participants au challenge de développement de Noël 2024.
 
-First, run the development server:
+## Prérequis
+
+Assurez-vous d'avoir les éléments suivants installés sur votre machine :
+
+- Node.js (version 14 ou supérieure)
+- npm (version 6 ou supérieure) ou yarn (version 1.22 ou supérieure)
+
+## Installation
+
+Fork et Clonez le dépôt et installez les dépendances :
+
+```bash
+git clone https://github.com/votre-utilisateur/christmas-challenge.git
+cd christmas-challenge
+npm install
+# ou
+yarn install
+```
+
+## Démarrage du serveur de développement
+
+Pour démarrer le serveur de développement, exécutez :
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure du projet
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Voici un aperçu de la structure des dossiers du projet :
 
-## Learn More
+```
+/components
+  /Home
+    - Project.js
+  /Items
+    - ProjectItem.js
+/pages
+  - _app.js
+  - index.js
+/public
+  /assets
+    /projects
+      - 1.png
+      - 2.png
+      - ...
+/services
+  - utils.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Composants
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Le composant `Project` importe la liste des projets depuis `utils.js` et affiche chaque projet en utilisant le composant `ProjectItem`.
 
-## Deploy on Vercel
+### ProjectItem
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le composant `ProjectItem` reçoit les données du projet via des props et affiche les informations du projet, y compris le nom de l'auteur, sa position, sa photo, et les liens vers le projet et le dépôt GitHub.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Utilisation
+
+Pour ajouter un nouveau projet, modifiez le fichier `utils.js` dans le dossier `services` et ajoutez un nouvel objet à la liste `projectList` :
+
+```javascript
+export const projectList = [
+  {
+    id: 1,
+    authorName: "Nom de l'auteur",
+    authorPosition: "Position de l'auteur",
+    authorPhoto: "URL de la photo de l'auteur",
+    authorLinkedin: "URL du profil LinkedIn de l'auteur",
+    url: "URL du projet",
+    github: "URL du dépôt GitHub",
+  },
+  // ...autres projets
+];
+```
+
+## Déploiement
+
+Le moyen le plus simple de déployer votre application Next.js est d'utiliser la [plateforme Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) créée par les développeurs de Next.js.
+
+Consultez notre [documentation de déploiement Next.js](https://nextjs.org/docs/deployment) pour plus de détails.
+
+## Ressources supplémentaires
+
+Pour en savoir plus sur Next.js, consultez les ressources suivantes :
+
+- [Documentation Next.js](https://nextjs.org/docs) - Apprenez-en plus sur les fonctionnalités et l'API de Next.js.
+- [Apprendre Next.js](https://nextjs.org/learn) - Un tutoriel interactif Next.js.
+
+Vous pouvez également consulter le [dépôt GitHub de Next.js](https://github.com/vercel/next.js) - vos retours et contributions sont les bienvenus !
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Veuillez soumettre une pull request ou ouvrir une issue pour discuter des changements que vous souhaitez apporter.
+
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus d'informations.
